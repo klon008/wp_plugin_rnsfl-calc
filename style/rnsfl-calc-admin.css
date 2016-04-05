@@ -1,0 +1,194 @@
+.del_icon{
+    height: 20%;
+}
+.component {
+    line-height: 1.5em;
+    margin: 0 auto;
+    padding: 2em 0 3em;
+    width: 90%;
+    max-width: 1000px;
+    overflow: hidden;
+}
+.component .filler {
+    font-family: "Blokk", Arial, sans-serif;
+    color: #d3d3d3;
+}
+table {
+    border-collapse: collapse;
+    margin-bottom: 0em;
+    width: 97%;
+    background: #fff;
+    margin-right: 3em;
+}
+td, th {
+    padding: 0.75em 1.5em;
+    text-align: left;
+}
+td.err {
+    background-color: #e992b9;
+    color: #fff;
+    font-size: 0.75em;
+    text-align: center;
+    line-height: 1;
+}
+th {
+    background-color: #31bc86;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+}
+tbody th {
+    background-color: #2ea879;
+}
+tbody tr:nth-child(2n-1) {
+    background-color: #f5f5f5;
+    transition: all .125s ease-in-out;
+}
+tbody tr:hover {
+    background-color: rgba(129,208,177,.3);
+}
+
+tbody td:focus{
+    background-color: #fff;
+}
+
+/* For appearance */
+.sticky-wrap {
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    margin: 3em 0;
+    width: 100%;
+}
+.sticky-wrap .sticky-thead,
+.sticky-wrap .sticky-col,
+.sticky-wrap .sticky-intersect {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .125s ease-in-out;
+    z-index: 50;
+    width: auto; /* Prevent table from stretching to full size */
+}
+.sticky-wrap .sticky-thead {
+    box-shadow: 0 0.25em 0.1em -0.1em rgba(0,0,0,.125);
+    z-index: 100;
+    width: 100%; /* Force stretch */
+}
+.sticky-wrap .sticky-intersect {
+    opacity: 1;
+    z-index: 150;
+
+}
+.sticky-wrap .sticky-intersect th {
+    background-color: #666;
+    color: #eee;
+}
+.sticky-wrap td,
+.sticky-wrap th {
+    box-sizing: border-box;
+}
+
+/* Not needed for sticky header/column functionality */
+td.user-name {
+    text-transform: capitalize;
+}
+.sticky-wrap.overflow-y {
+    overflow-y: auto;
+    max-height: 50vh;
+}
+
+/******************************************************/
+.button {
+    display: inline-block !important;
+    -webkit-box-sizing: content-box !important;
+    -moz-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+    cursor: pointer !important;
+    padding: 0.75em 1em !important;
+    border: none !important;
+    -webkit-border-radius: 2px !important;
+    border-radius: 2px !important;
+    font: normal 1.25em/normal "Abel", Helvetica, sans-serif !important;
+    color: rgba(255,255,255,1) !important;
+    -o-text-overflow: clip !important;
+    text-overflow: clip !important;
+    background: rgb(98, 172, 21) !important;
+    text-shadow: 0 -1px 0 rgb(91,129,17) !important;
+    margin: 1em !important;
+}
+
+.button:hover {
+    background: rgb(111, 186, 34) !important;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms !important;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms !important;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms !important;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms !important;
+}
+
+.button:active {
+    background: rgb(98, 172, 21) !important;
+    -webkit-box-shadow: 0 1px 4px 0 rgb(65,105,23) inset !important;
+    box-shadow: 0 1px 4px 0 rgb(65,105,23) inset !important;
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+}
+/***************************************************/
+
+input[type="text"] {
+    padding: 0.25rem 0.25rem;
+    border-radius: 0;
+    font-weight: 300;
+    transition: 0.25s linear outline, 0.25s linear border;
+    outline: 8px solid transparent;
+    border: 1px solid rgba(52,152,219,0.5);
+}
+input[type="text"]:hover {
+    border-color: #3498db;
+}
+input[type="text"]:focus {
+    outline: 2px solid rgba(52,152,219,0.8);
+}
+input[type="text"]:disabled {
+    width: 100%;
+    padding: 0.25rem 0.25rem;
+    border-radius: 0;
+    font-weight: 300;
+    cursor: not-allowed;
+    background: rgba(0,0,0,0.01);
+    border: 1px solid rgba(0,0,0,0.25);
+}
+label {
+    display:block;
+    font-weight: 700;
+}
+
+.lined{
+    display: inline-block;
+    margin: 10px;
+}
+/******************************************************/
+.modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading {
+    overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+    display: block;
+}

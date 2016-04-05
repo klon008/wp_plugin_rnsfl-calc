@@ -1,0 +1,123 @@
+<div id="body">
+    <h3 class="name">Рассчитать стоимость</h3>
+
+    <div class="row-fluid">
+        <div class="col-xs-6 col-sm-12 col-md-6">
+            <div class="allcost">
+                <h4 class="sname">
+                    Все цены
+                </h4>
+                <h5 class="subname">
+                    Изготовление трафарета*
+                </h5>
+                <div class="subtable" id="building-stencil">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Формат</th>
+                            <th>Стоимость</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="abs"><sub>* Стоимость создания дизайн макета - <span id="label_frb1"></span></sub></p>
+
+                <h5 class="subname">
+                    Стоимость нанесений **
+                </h5>
+                <div class="subtable" id="apply-paint">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Формат</th>
+                            <th> до 20 шт</th>
+                            <th> 20 - 100 шт</th>
+                            <th> от 100 шт</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                    <p class="abs"><sub>** Цены указаны за 1 цвет. Каждый дополнительный<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;цвет
+                        увеличивает стоимость на <span id="label_color"></span>, заливка фона увеличивает стоимость на <span id="label_frb2"></span></sub></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6" id="s-block">
+            <div class="tcalc clearfix">
+                <img src="http://asphalt.rarost.ru/img/calcs.png" alt="картинка">
+                <div class="sname">
+                    <h4>Калькулятор</h4>
+                </div>
+                <div class="fname">
+                    Минимальный заказ от 5 000 Р
+                </div>
+            </div>
+
+            <div>
+                <label for="size">Формат трафарета:</label><br/>
+                <select name="size" id="size">
+                </select>
+            </div>
+            <div>
+                <label for="frb1">Дизайн макета:</label>
+                <input type="checkbox" id="frb1" name="frb1" value="1">
+            </div>
+            <div>
+                <label for="color">Количество цветов:</label><br/>
+                <select name="color" id="color">
+                    <option value="0">1 цвет</option>
+                    <option value="1">2 цвета</option>
+                    <option value="2">3 цвета</option>
+                    <option value="3">4 цвета</option>
+                    <option value="4">5 цветов</option>
+                </select>
+            </div>
+            <div>
+                <label for="frb2">Фон:</label>
+                <input type="checkbox" id="frb2" name="frb2" value="1">
+            </div>
+            <div>
+                <label for="counter">Кол-во нанесений:</label>
+                <input type="number" name="counter" value="0" maxlength="5" id="counter"/>
+            </div>
+
+            <br/>
+            <hr/>
+            <div id="final-cost-here">
+                <div class="label label4" id="final-cost1">
+                    Цена трафарета:
+                    <span>
+                        0 Pуб.
+                    </span>
+                </div>
+                <div class="label label5" id="final-cost2">
+                    Цена нанесений:
+                    <span>
+                        0 Pуб.
+                    </span>
+                </div>
+                <div class="label label6" id="final-cost3">
+                    Итого:
+                    <span>
+                        0 Pуб.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12">
+            <form method="post" id="calculate" action="javascript:void(0);">
+                <input type="text" name="fio" placeholder="Представьтесь, пожалуйста *"
+                       style="" required/>
+                <input type="text" name="phone" placeholder="Ваш телефон *" required/>
+                <input type="text" name="mail" placeholder="E-mail" required/>
+                <textarea placeholder="Комментарий" name="comment"></textarea>
+                <input class="submit" type="submit" value="Заказать рекламу">
+            </form>
+        </div>
+    </div>
+
+</div>
